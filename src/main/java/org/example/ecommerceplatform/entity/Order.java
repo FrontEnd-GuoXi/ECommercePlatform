@@ -1,5 +1,6 @@
 package org.example.ecommerceplatform.entity;
 
+import com.baomidou.mybatisplus.annotation.FieldFill;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
@@ -8,6 +9,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.example.ecommerceplatform.enums.OrderStatus;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
@@ -42,17 +44,17 @@ public class Order {
     @TableField("pay_amount")
     private BigDecimal payAmount;
 
-    /** 状态: 0-待支付, 1-已支付, 2-已取消, 3-已完成 */
+    /** 订单状态 */
     @TableField("status")
-    private Integer status;
+    private OrderStatus status;
 
     /** 支付时间 */
     @TableField("pay_time")
     private LocalDateTime payTime;
 
-    @TableField("created_at")
+    @TableField(value = "created_at", fill = FieldFill.INSERT)
     private LocalDateTime createdAt;
 
-    @TableField("updated_at")
+    @TableField(value = "updated_at", fill = FieldFill.INSERT_UPDATE)
     private LocalDateTime updatedAt;
 }
