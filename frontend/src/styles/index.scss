@@ -1,0 +1,55 @@
+// FlashCommerce - global styles
+$primary: #ff5a4c;
+$primary-dark: #e84a3d;
+$text-main: #323233;
+$text-regular: #646566;
+$text-secondary: #969799;
+$border: #ebedf0;
+$bg: #f7f8fa;
+
+:root {
+  --fc-primary: #ff5a4c;
+  --fc-primary-dark: #e84a3d;
+  --fc-text-main: #323233;
+  --fc-text-regular: #646566;
+  --fc-text-secondary: #969799;
+  --fc-border: #ebedf0;
+  --fc-bg: #f7f8fa;
+}
+
+.fc-page {
+  min-height: 100vh;
+  padding-bottom: 56px;
+  background: $bg;
+}
+
+.fc-price {
+  color: $primary;
+  font-weight: 600;
+}
+
+.fc-section-title {
+  padding: 12px 16px 8px;
+  font-size: 15px;
+  font-weight: 600;
+  color: $text-main;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  &::before {
+    content: '';
+    display: inline-block;
+    width: 3px;
+    height: 14px;
+    background: $primary;
+    border-radius: 2px;
+  }
+}
+
+.fc-card {
+  background: #fff;
+  border-radius: 8px;
+  margin: 8px 12px;
+  padding: 12px;
+}
