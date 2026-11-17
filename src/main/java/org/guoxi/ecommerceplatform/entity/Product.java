@@ -1,4 +1,4 @@
-package org.example.ecommerceplatform.entity;
+package org.guoxi.ecommerceplatform.entity;
 
 import com.baomidou.mybatisplus.annotation.FieldFill;
 import com.baomidou.mybatisplus.annotation.IdType;
@@ -14,38 +14,46 @@ import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 /**
- * 订单明细表
+ * 商品表
  */
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@TableName("tb_order_item")
-public class OrderItem {
+@TableName("tb_product")
+public class Product {
 
+    /** 商品ID */
     @TableId(type = IdType.AUTO)
     private Long id;
 
-    /** 关联业务订单号 — 关联 tb_order.order_no */
-    @TableField("order_no")
-    private String orderNo;
+    /** 商品标题 */
+    @TableField("title")
+    private String title;
 
-    /** 商品ID — 关联 tb_product.id */
-    @TableField("product_id")
-    private Long productId;
+    /** 分类ID — 关联分类表 */
+    @TableField("category_id")
+    private Long categoryId;
 
-    /** 快照商品名 */
-    @TableField("product_name")
-    private String productName;
-
-    /** 快照单价 */
+    /** 销售原价 */
     @TableField("price")
     private BigDecimal price;
 
-    /** 购买数量 */
-    @TableField("quantity")
-    private Integer quantity;
+    /** 商品主图 */
+    @TableField("pic_url")
+    private String picUrl;
+
+    /** 商品详情 */
+    @TableField("detail")
+    private String detail;
+
+    /** 上架状态: 0-下架, 1-上架 */
+    @TableField("status")
+    private Integer status;
 
     @TableField(value = "created_at", fill = FieldFill.INSERT)
     private LocalDateTime createdAt;
+
+    @TableField(value = "updated_at", fill = FieldFill.INSERT_UPDATE)
+    private LocalDateTime updatedAt;
 }

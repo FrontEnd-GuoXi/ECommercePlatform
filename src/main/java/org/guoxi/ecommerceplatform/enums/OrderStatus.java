@@ -1,4 +1,4 @@
-package org.example.ecommerceplatform.enums;
+package org.guoxi.ecommerceplatform.enums;
 
 import com.baomidou.mybatisplus.annotation.EnumValue;
 import lombok.Getter;

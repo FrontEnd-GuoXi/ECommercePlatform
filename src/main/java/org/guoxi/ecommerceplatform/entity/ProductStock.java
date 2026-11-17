@@ -1,4 +1,4 @@
-package org.example.ecommerceplatform.entity;
+package org.guoxi.ecommerceplatform.entity;
 
 import com.baomidou.mybatisplus.annotation.FieldFill;
 import com.baomidou.mybatisplus.annotation.TableField;

@@ -1,4 +1,4 @@
-package org.example.ecommerceplatform;
+package org.guoxi.ecommerceplatform;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

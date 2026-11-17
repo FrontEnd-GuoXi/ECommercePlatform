@@ -1,4 +1,4 @@
-package org.example.ecommerceplatform.entity;
+package org.guoxi.ecommerceplatform.entity;
 
 import com.baomidou.mybatisplus.annotation.FieldFill;
 import com.baomidou.mybatisplus.annotation.IdType;
@@ -9,7 +9,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.example.ecommerceplatform.enums.OrderStatus;
+import org.guoxi.ecommerceplatform.enums.OrderStatus;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
